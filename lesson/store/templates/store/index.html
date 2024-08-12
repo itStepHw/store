@@ -1,0 +1,75 @@
+{% extends 'store/base/base.html' %}
+
+{% block title %}Главная страница{% endblock title %}
+
+
+{% block main %}
+    <div class="container">
+        <div class="sidebar">
+            <h3>Фильтр</h3>
+            <hr>
+
+            <form class="form" method="get" action="">
+                <p>Диапазон цены</p>
+                <div class="from-to">
+
+                    <input class="input" type="number" name="from-to-from" placeholder="от">
+                    <input class="input" type="number" name="from-to-to" placeholder="до">
+                </div>
+
+                <hr />
+
+                <p>Бренды/статусы</p>
+                <div class="brand-status">
+                    <div class="brand">
+                        <input type="checkbox" name="brand">
+                        <span>Бренд 1</span>
+                    </div>
+
+                    <div class="status">
+                        <input type="checkbox" name="status">
+                        <span>Статус 1</span>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="raiting-nalichie">
+                    <div class="raiting">
+                        <input type="radio" name="raiting"><span>1</span>
+                        <input type="radio" name="raiting"><span>2</span>
+                        <input type="radio" name="raiting"><span>3</span>
+                        <input type="radio" name="raiting"><span>4</span>
+                        <input type="radio" name="raiting"><span>5</span>
+                    </div>
+
+                    <div class="malichie">
+                        <input type="checkbox"> <span>В наличии</span>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="kateg-count">
+                    <div class="categ">
+                        <input type="checkbox" name="categ">
+                        <span>Категория 1</span>
+                    </div>
+
+                    <div class="count">
+                        <input class="input" type="number" placeholder="1">
+                        <span>Кол-во на складе</span>
+                    </div>
+                </div>
+
+                <hr />
+
+            </form>
+
+        </div>
+        <div class="main-content">
+            <h3>Контент</h3>
+            <hr>
+        </div>
+    </div>
+{% endblock main %}
